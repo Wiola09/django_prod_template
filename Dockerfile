@@ -20,7 +20,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Kreiraj folder za STATIC_ROOT ako ne postoji
-RUN mkdir -p staticfiles
+RUN mkdir -p /app/staticfiles
 
 RUN python manage.py migrate  # Dodaj ovu liniju
 
