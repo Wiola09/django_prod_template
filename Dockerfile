@@ -20,7 +20,7 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
 # Set the command to run our web service using Gunicorn, binding it to 0.0.0.0 and the PORT environment variable
-CMD gunicorn server.wsgi:application --bind 0.0.0.0:"${PORT}"
+CMD gunicorn django_prod_template.wsgi:application --bind 0.0.0.0:"${PORT}"
 
 # Inform Docker that the container listens on the specified network port at runtime
 EXPOSE ${PORT}
