@@ -19,6 +19,9 @@ RUN pip install --upgrade pip
 # Install dependencies from the requirements.txt file to ensure our Python environment is ready
 RUN pip install -r requirements.txt
 
+# Kreiraj folder za STATIC_ROOT ako ne postoji
+RUN mkdir -p staticfiles
+
 RUN python manage.py migrate  # Dodaj ovu liniju
 
 # Prikupi statičke fajlove
